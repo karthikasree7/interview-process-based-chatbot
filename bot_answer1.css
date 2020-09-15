@@ -1,0 +1,101 @@
+
+body{
+  background: linear-gradient(#063A50, transparent), url("https://www.magaya.com/wp-content/uploads/2019/10/person-using-laptop.jpeg");
+  background-size : cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height:80vh;
+ float:center;
+}
+
+.container{
+
+max-width:800px;
+height:auto;
+background:rgba(0, 0, 0, 0.8);
+margin:60px auto;
+box-sizing:border-box;
+padding:40px;
+border-radius:12px;
+}
+h2{
+font-size:30px;
+text-align:center;
+color:#39dc79;
+font-family:Century Gothic;
+}
+h1{
+font-size:20px;
+text-align:center;
+color:white;
+font-family:Century Gothic;
+
+}
+p{
+text-align:center;
+letter-spacing: 1px;
+font-size:45px;
+margin-bottom: 20px;
+background: linear-gradient(to right, #0575e6,#21b79);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.input,
+.msg .area{
+width:100%;
+padding:20px;
+background:rgba(0, 0, 0, 0.9);
+color:white;
+box-sizing: border-box;
+margin-bottom: 25px;
+border: 2px solid #e9eaea;
+font-size:14px;
+border-radius: 5px;
+outline: none;
+transition:all 0.5s;
+}
+.msg .area {
+height:100px;
+}
+input[type="submit"]
+{
+border:none;
+outline:none;
+height:40px;
+background:#1c8adb;
+color: #fff;
+font-size:18px;
+border-radius:15px;
+width:100px;
+
+}
+input[type="submit"]:hover
+{
+cursor: pointer;
+background:#39dc79;
+color: #000;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  float:left;
+  background:#0E5CC1;
+  border-radius:15px;
+margin-top:-140px;
+margin-left: 500px;
+font-weight:bold;
+font-family: Century Gothic;
+}
+
+a:hover {
+ background:#39dc79;
+color: #000;
+}
+.back {
+   background:#1c8adb;
+  color: white;
+  font-weight:bold;
+  font-family: Century Gothic;
+  
+}

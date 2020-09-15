@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bot Answers</title>
+<link rel="stylesheet" href="/static/css/bot_answer1.css">
+
+</head>
+<body><br>
+	<h2>CHATBOT ANSWERS</h2>
+<div class="container">
+<h1>SET KEYWORD</h1> 
+
+
+<form method="POST" action="/insertQuestion">
+<div class="subject">
+<input type="text" name="question" placeholder="Set Keyword" class="input" value="{{data}}">
+</div>
+<h1>SET ANSWER</h1> 
+<div class = "msg">
+<textarea class="area" placeholder="Add Bot Answers" name="answer"></textarea>
+</div>
+<center>
+<input type="submit" name="submit" value="ADD">
+</center>
+</div>
+</form>
+<a href="D:\Data\Main Project\Template\bot.html" class="back">&laquo; Back </a>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<style>
+		.video {	
+		padding-left:50px;
+	}
+	
+	body {
+		
+		background: url("http://virtuallyfamousmarketing.com/wp-content/uploads/2017/06/computer-blue-opacity-background.jpg");
+		height: 100%; 
+		 background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	h1 {
+		text-align:center;
+		color:#39dc79;
+		font-size:35px;
+	}
+	.search-box{
+		position:absolute;
+		top:10%;
+		left:78%;
+		color:white;
+		background-color: rgba(0, 0, 0, 0.4);
+		height:20px;
+		border:2px solid gray;
+		border-radius:40px;
+		padding:10px;
+		
+	}
+	.search-btn {
+		color:blue;
+		width:65px;
+		height:20px;
+		border-radius:5px;
+		font-size:15px;
+		background:none;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		
+	}
+	.search-txt {
+		
+		border:none;
+		color: white;
+		background:none;
+		outline:none;
+		float: left;
+		padding:0 ;
+		font-family: 'Merienda';
+		font-size:17px;
+		transition:0.4s;
+		line-height:20px;
+		width:155px;
+	}		
+		</style>
+	<title>Aptitude</title> <br> <br>
+	</head>
+<body> 
+	<h1> APTITUDE VIDEO</h1> <br> <br><br>
+	
+	<div class="video">
+		<div class="search-box">
+		 <input class="search-txt"  type="text" name="search" placeholder="Type to Search..">
+		 <a class="search-btn" href="#">
+		 <i class="fa fa-search" aria-hidden="true"></i></a>
+		 <a href = "/user.html"><h3>Go Back</h3><a><br> <br>
+		 </div>
+		<center>
+	
+{% if data is defined %}
+{% for trend in data %}
+<video src="{{trend[0]}}" controls="controls" loop="loop" autoplay="autoplay" width="370"></video>&ensp;&ensp;&ensp;
+{% endfor %}
+{% endif %}
+
+  </div>
+</div>
+</center>
+</body> 
+</html>
+<p>There's a way to do it better..!!</p>

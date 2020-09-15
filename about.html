@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About</title>
+<link rel="stylesheet" href="static/css/about1.css">
+</head>
+<body>
+
+<div class="navbar">
+  <a href="/contact.html">CONTACT
+  <a href="/about.html">ABOUT</a>
+  <div class="subnav">
+    <button class="subnavbtn">LOGIN</button>
+    <div class="subnav-content">
+      <a href="/user_login.html">USER</a>
+      <a href="/admin_login.html">ADMIN</a>
+      
+    </div>
+  </div> 
+  
+  
+</div>
+<div class="subnav">
+   <button class="subnavbtn"> <a href="/home.html">HOME</a></button>
+    </div>
+    
+<div class = "title">
+	<h1>ABOUT US</h1>	
+</div>
+
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="https://imgix.bustle.com/mic/4uavxu0xadbknixxhrx6hcejgrx1fhhk7zn2yfmnmyipbjfhev69yi6mwyg7shmc.jpg?w=1020&h=576&fit=crop&crop=faces&auto=format&q=70" style="width:100%" " height: 70vh;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="https://theblogimages.adobe.com/wp-content/uploads/2015/09/website-content-marketing-e1443548864640-1.jpg" style="width:100%" " height: 70vh;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="https://media.istockphoto.com/photos/artificial-intelligenceai-chat-bot-concept-picture-id936401434?k=6&m=936401434&s=612x612&w=0&h=GqmXgdfIKoTjSQgYLUXsI4DKd2eqLgkRkomyqB0jUGY=" style="width:100%" " height:70vh;">
+  </div>
+    
+  
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://imgix.bustle.com/mic/4uavxu0xadbknixxhrx6hcejgrx1fhhk7zn2yfmnmyipbjfhev69yi6mwyg7shmc.jpg?w=1020&h=576&fit=crop&crop=faces&auto=format&q=70" style="width:100%" onclick="currentSlide(1)" alt="Our software allows users to create profiles, which typically consist of a resume describing their work experience, education , location and skills and interest. Job interview schedule that finds the right people,place and works based on their resume.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://theblogimages.adobe.com/wp-content/uploads/2015/09/website-content-marketing-e1443548864640-1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Our software provides online mode of learning to users.The “learning” version of the site is designed to help User's learn useful and even essential skills that would help them do better in building their career paths in the current job market.">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media.istockphoto.com/photos/artificial-intelligenceai-chat-bot-concept-picture-id936401434?k=6&m=936401434&s=612x612&w=0&h=GqmXgdfIKoTjSQgYLUXsI4DKd2eqLgkRkomyqB0jUGY=" style="width:100%" onclick="currentSlide(3)" alt="Our Chatbot performs,after user interview submission, that chatbot that helps to organize and keep up to date user’s interview.">
+    </div>
+    
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

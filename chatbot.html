@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile Update</title>
+
+
+	<link rel="stylesheet" href="/static/css/chatbot1.css">
+	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+var invaild="";
+
+var d = new Date();
+var hr = d.getHours();
+var min = d.getMinutes();
+
+$("#senderClick").click(function(){
+var msg=$("#chat-msg").val();
+invaild=msg;
+  $(".chat-container").append('<br><div id="#sender" class="row chat-receiver"><label>'+msg+'</label><p class="right-text">4:50 PM</p></div>');
+  	
+	$.ajax({
+		type: 'GET',
+		dataType: 'json',
+		contentType: 'application/json',
+		url: "/getchat",
+		data: {msg:msg},
+		success: function(data, textStatus ){
+		console.log(data);
+		 $(".chat-container").append("<br><br><br><div class='chat-sender'><div class='chat-sender-img'><img src='https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1'> </div> <div class='chat-sender-message'> <p>bot</p> <label>"+data.result+"</label> <p class='right-text'>"+hr+":"+min+"</p> </div>");
+		 $("#chat-msg").val('');
+		},
+		error: function(xhr, textStatus, errorThrown){
+		//alert('request failed'+errorThrown);
+		 $(".chat-container").append("<br><br><br><div class='chat-sender'><div class='chat-sender-img'><img src='https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1'> </div> <div class='chat-sender-message'> <p>bot</p> <label>Unable to process</label> <p class='right-text'></p> </div>");
+		 $("#chat-msg").val('');
+		}
+		
+		});
+	
+	});
+	
+	
+$("#invaildClick").click(function(){
+	
+	//alert(invaild);
+	$.ajax({
+		type: 'GET',
+		dataType: 'json',
+		contentType: 'application/json',
+		url: "/invaildQus",
+		data: {
+			question:invaild
+		},
+		success: function(data, textStatus ){
+		console.log(data);
+		
+		},
+		error: function(xhr, textStatus, errorThrown){
+		//alert('request failed'+errorThrown);
+		}
+		
+		});
+
+
+});
+});
+</script>
+<body>
+	<center>
+<h1>CHECK YOUR INTERVIEW STATUS</h1>
+</center>
+<div class="chat-bot">
+        <div class="chat-bot-inner">
+            <div class="chat-header">
+                <div class="chat-name">
+                    <div class="chat-img">
+                        <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1">
+                    </div>
+                    <div class="chat-status">
+                        <h4>BOT</h4>
+                        <p>Online</p>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="chat-container chat-class-cmd">
+                <div class="chat-sender">
+                    <div class="chat-sender-img">
+                        <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1">
+                    </div>
+                    <div class="chat-sender-message">
+                        <p>bot</p>
+                        <label>Hello..Welcome</label>
+                        <p class="right-text">4:50 PM</p>
+                    </div>
+                </div>
+             
+				 <div class="chat-receiver">
+						<label>Hello..!I need a help..</label>
+						<p class="right-text">4:50 PM</p>
+					</div>
+         
+                 <div class="chat-sender">
+                    <div class="chat-sender-img">
+                        <img src="https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1">
+                    </div>
+                    <div class="chat-sender-message">
+                        <p>bot</p>
+                        <label>Happy to help you!</label>
+                        <p class="right-text">4:50 PM</p>
+                    </div>
+                </div>
+           
+                
+                
+                    
+                
+            </div>
+
+            <div class="chat-input">
+                <input type="text"  id="chat-msg"	>
+              <img src="https://image.flaticon.com/icons/png/512/60/60525.png" id="senderClick">
+			 
+            </div>
+
+        </div>
+    </div>
+ 
+<a href="#" class="button" id="invaildClick">INVALID</a>
+</body>
+</head>
+</html>

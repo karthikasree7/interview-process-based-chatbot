@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Interview Process</title>
+<link rel="stylesheet" href="/static/css/interview_notif1.css">
+</head>
+<body> <br><br>
+	<h1>INTERVIEW NOTIFICATION</h1>
+	
+<a href="/admin.html"><h1>BACK</h1></a><br> 
+<table id="interview">
+  
+    <tr>
+      <th>USER NAME</th>
+      
+      <th>INTRESTED</th>
+      
+    </tr>
+{% if data is defined %}
+{% for trend in data %}
+    <tr>
+      <td data-column="User Name">{{trend[1]}}</td>
+     
+      <td data-column="Job Title">{{trend[2]}}</td>
+      
+    </tr>
+   
+{% endfor %}
+
+{% endif %}
+</table>

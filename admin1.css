@@ -1,0 +1,188 @@
+body {
+  background: linear-gradient(#646475, transparent), url("https://solutions1313.com/wp-content/uploads/2018/09/tekontinam-blogs-wallpaper.jpg");
+  font-family: Century Gothic;
+  background-size : cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 550px;
+  margin: 0;
+ padding: 30px 350px;
+}
+.navbar {
+  overflow: hidden;
+  background-color: transparent; 
+  width: 150%;
+  float:center;
+  
+}
+.navbar a {
+  float: right;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+  font-weight:bold;
+  
+}
+
+.subnav {
+  float: right;
+  overflow: hidden;
+  font-weight:bold;
+}
+
+.subnav .subnavbtn {
+  font-size: 18px;  
+  font-weight:bold;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  border: 1px solid transparent;
+  
+}
+
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #424454;
+  color:#AAB2F5;
+  border: 1px solid transparent;
+   transition:0.6s ease;
+
+  border-radius:15px;
+    .pointer {cursor: pointer;}
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  font-weight:bold;
+  background-color: transparent;
+  width: 65%;
+  z-index: 1;
+  
+}
+
+.subnav-content a {
+  float: center;
+  color: white;
+  margin-top:12px;
+  font-weight:bold;
+  padding: 14px 53px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  
+}
+
+.subnav-content a:hover {
+text-decoration: none;
+  background-color: #424454;
+  color: #AAB2F5;
+  transition:0.6s ease;
+   
+   border-radius:15px;
+    .pointer {cursor: pointer;}
+  
+}
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.title{
+position: absolute;
+top:150px;
+left:90px;
+transform: translate50%,-50%);
+color:#d6ff98;
+font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+.title h1{
+color: #d6ff98;
+font-family:"Comic Sans MS", cursive, sans-serif;
+font-size:26px;
+left:350px;
+float:center;
+font-weight: bold;
+}
+
+#pop-up {
+  display: flex;
+  float:center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-top:200px;
+  margin-left: 90px;
+  left: 10vw - 5/2vw;
+  width: 50%;
+  height: 20vh;
+  background: transparent;
+  border: solid .125em lightgrey;
+  box-shadow: 0 0 32px rgba(0, 0, 0, .5);
+  
+  transform: scale(0);
+  animation: pop-up .1s 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1, .3, .5, 1.3);
+  
+  &:target {
+    animation: pop-down .075s;
+    animation-fill-mode: forwards;
+  }
+}
+
+a[href="#pop-up"] {
+  text-decoration: none;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: .75em 1.5em;
+  font-size: 2em;
+  color: white;
+  background:#424454;
+  border-radius: 15px;
+  transition: background .35s;
+  
+  &:hover, &:focus {
+    background: lighten(@color--main, 5%);
+  }
+  
+  &:active {
+    transition: background .075s;
+    background: darken(@color--main, 10%);
+  }
+  
+  &:after {
+    content: '×';
+    position: absolute;
+    top: .125em;
+    right: .125em;
+    font-size: 2em;
+    line-height: .45;
+    color: @color--black;
+    transition: color .35s;
+  }
+}
+
+@keyframes pop-up {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes pop-down {
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(0);
+  }
+}
+

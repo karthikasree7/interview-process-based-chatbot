@@ -1,0 +1,220 @@
+body{
+
+background: url("https://hdwallsource.com/img/2019/9/astro-bot-rescue-mission-vr-wallpaper-67754-70074-hd-wallpapers.jpg");
+background-size : cover;
+height:89vh;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+h1{
+margin-left:700px;
+color:#39dc79;
+font-weight:bold;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* width */
+.chat-container::-webkit-scrollbar {
+  width: 16px;
+}
+/* Track */
+.chat-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+.chat-container::-webkit-scrollbar-thumb {
+  background: #dadada;
+}
+/* Handle on hover */
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #dadada;
+}
+.chat-bot {
+  position: fixed;
+  bottom: 60px;
+  right: 100px;
+  border-radius: 15px;
+  height: 480px;
+  width: 325px;
+  overflow: hidden;
+  webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.chat-bot-inner {
+  overflow: auto;
+  float: right;
+  background-color: #fff;
+}
+.chat-header {
+  height: 60px;
+  background-color: #3051a0;
+  width: 325px;
+  position: fixed;
+  z-index: 99;
+  webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.chat-name {
+  display: inline-flex;
+}
+.chat-name img {
+  width: 38px;
+  padding: 12px 0px 8px 20px;
+}
+.chat-status h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-left: 10px;
+  margin: 12px 10px 0px 10px;
+}
+.chat-status p {
+  color: #fff;
+  margin: 0;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.chat-container {
+  padding: 20px;
+  height: 308px;
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-y: scroll;
+  margin-bottom: 160px;
+}
+.chat-sender {
+  display: inline-flex;
+}
+.chat-sender-img {
+  width: 50px;
+  margin-top: 10px;
+}
+.chat-sender-img img {
+  width: 36px;
+  border-radius: 50%;
+}
+.chat-sender-message {
+  margin-left: 0px;
+}
+.chat-sender-message p {
+  margin: 0;
+  color: #a9a9a9;
+  margin-bottom: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.chat-sender-message label {
+  background-color: #17479d;
+  display: inline-block;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.chat-sender-message .right-text,
+.chat-receiver .right-text {
+  text-align: right;
+  font-size:10px;
+}
+.chat-receiver {
+  float: right;
+  margin-top: 15px;
+}
+.chat-receiver label {
+  background-color: #f8f8f8;
+  display: inline-block;
+  padding: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 0px 0px;
+  font-size: 14px;
+  line-height: 1.5;
+  webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.chat-receiver p {
+  margin: 0;
+  color: #a9a9a9;
+  margin-bottom: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.chat-input {
+  margin: 20px;
+  position: fixed;
+  bottom: 43px;
+  width: 278px;
+  z-index: 99;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+ 
+}
+.chat-input input {
+  width: 215px;
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  position: relative;
+  font-size:14px;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.chat-input img {
+  width: 24px;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+}
+.floating-action-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #3051a0;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 45px;
+}
+.floating-action-btn img {
+  width: 24px;
+  margin: 18px;
+}
+.button {
+	
+
+  font-weight:bold;
+  padding: 16px 39px;
+  border-radius:15px;
+   top: 94px;
+   margin-left:700px;
+ 
+  outline:none;
+  
+  text-decoration:none;
+  border:none;
+outline:none;
+height:60px;
+background:Red;
+color: #fff;
+font-size:18px;
+
+}
+
+.button:hover {
+ font-weight:bold;
+ cursor: pointer;
+ background:#39dc79;
+ color: #000;
+}

@@ -1,0 +1,187 @@
+body{
+ background: url("https://www.aelmarkhams.co.uk/wp-content/uploads/2017/12/jobs-background-image.jpg");
+ 
+  font-family: Century Gothic;
+  background-size : cover;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  margin: 0;
+  padding:14px 25px;
+  
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: transparent; 
+  float:right;
+ 
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 35px;
+  text-decoration: none;
+  
+}
+
+.subnav  {
+  float: right;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 33px;
+  background-color: transparent;
+  font-family: inherit;
+  margin: 0;
+  border: 1px solid transparent;
+  
+}
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    }
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #424454;
+  color:#AAB2F5;
+  border: 1px solid transparent;
+   font-weight: bold;
+    transition:0.5s ease;
+    border-radius:15px;
+    .pointer {cursor: pointer;}
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: transparent;
+  width: 85%;
+  z-index:1;
+  
+}
+
+.subnav-content a {
+  float: center;
+  color: white;
+  text-decoration: none;
+  border: 1px solid transparent;
+  
+}
+
+.subnav-content a:hover {
+text-decoration: none;
+  background-color: #424454;
+  color: #AAB2F5;
+  transition:0.5s ease;
+   font-weight: bold; 
+   border: 1px solid transparent;
+   .pointer {cursor: pointer;}
+}
+.subnav:hover .subnav-content {
+  display: block;
+  transition:0.5s ease;
+   border: 1px solid transparent;
+   .pointer {cursor: pointer;}
+}
+
+.title{
+position: absolute;
+top:90px;
+left:540px;
+transform: translate (50%,-50%);
+color:#39dc79;
+font-family: 'Merienda';
+font-weight:bold;
+
+}
+
+.title h1{
+color: #fff;
+font-family:'Merienda';
+font-size:50px;
+float:center;
+color:#39dc79;
+font-weight:bold;
+}
+.container {
+width:900px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+}
+
+.container  .box  {
+text-align:center;
+
+
+}
+.container  .box  .icon .fa{
+letter-spacing:2px;
+font-size:44px;
+cursor:pointer;
+
+}
+.box {
+background: #131421;
+padding: 0 10px;
+margin:0 10px;
+width:calc(33% - 20px);
+height: 250px;
+display:flex;
+flex-direction:column;
+justify-content: center;
+align-items:center;
+color:#fff;
+border-radius:10px;
+}
+.icon .fa {
+font-size:28px;
+background:#AAB2F5;
+width:60px;
+height:60px;
+color:blue;
+text-align:center;
+line-height:60px !important;
+border-radius:50%;
+transition:0.3s linear;
+
+}
+.box:hover .icon .fa {
+background:none;
+color:#39dc79;
+transform: scale(1.6);
+}
+.box h3  {
+margin-top:20px;
+font-weight:300;
+letter-spacing:2px;
+max-height:0;
+opacity:0;
+transition:0.3s linear;
+}
+
+.box:hover h3, .box:hover h4 {
+max-height:40px;
+opacity:1;
+}
+.cp-text{
+  text-align:center;
+  margin-top:90px;
+  margin-right:-20px;
+  background:rgba(0, 0, 0, 0.4);
+  color:#39dc79;
+  font-weight:bold;
+
+  padding: 5px;
+}

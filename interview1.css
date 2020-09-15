@@ -1,0 +1,79 @@
+
+* {
+margin:0;
+padding: 0;
+}
+body {
+background: linear-gradient(#063A50, transparent), url("https://www.digitalchalk.com/wp-content/uploads/2019/05/on-boarding-library-employees.jpg");
+background-size: cover;
+  background-repeat: no-repeat;
+	 background-position:center;	
+
+	height:90vh;	
+	top:30px;
+
+}
+h1{
+text-align: left;
+margin-left:95px;
+text-decoration: none;
+color:#39dc79;
+}
+#name {
+
+width:80%;
+padding:15px 15px;
+height: 25px;
+border-radius: 6%;
+outline:0;
+border:3px solid lightgray;
+}
+
+
+table {
+
+text-align: left;
+margin-left:20px;
+float: center;
+width:50%;
+color: white;
+background-color: rgb(8,48,80);
+border-radius:25px;
+height: 10px;
+font-size: 19px;
+font-family: serif;
+padding: 10px;
+border: 5px solid gray;
+border-collapse: separate;
+border-spacing: 15px;
+
+
+}
+table a{
+color:white;
+text-align:center;
+float:center;
+font-size:25px;
+
+}
+input[type=submit] {
+width:30%;
+box-sizing: border-box;
+padding: 10px 0;
+margin-top:10px;
+outline:none;
+background:#1c8adb;
+opacity:0.7;
+border-radius:20px;
+font-size:25px;
+color:#fff;
+
+}
+input[type=submit]:hover{
+cursor: pointer;
+background:#39dc79;
+color: #000;
+}
+
+
+ 

@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Videos</title>
+<link rel="stylesheet" href="/static/css/add_video1.css">
+</head>
+<body>
+
+<h1>UPLOAD VIDEO</h1>
+<a href="/admin.html">Go Back</a>
+<div class="login-box">
+	<center>
+	<form method="post" enctype="multipart/form-data" action="/upload">
+<div class="select">
+   <select name="vdoType" id="format">
+      <option selected disabled>SELECT</option>
+      <option value="aptVdo">Aptitude Videos</option>
+      <option value="techVdo">Technical Videos</option>
+      <option value="hrVdo">HR Interview Videos</option> 
+      </center>
+   </select>
+</div><br><br> <br>
+<div class="upload-btn-wrapper">
+  <button class="btn">Upload</button>
+  <input type="file" name="file" />
+    </div><br><br>
+<button type="submit">ADD</button>
+  </form>
+
+
+ <br> <br><br> 
+</div>
+</body>
+</html>

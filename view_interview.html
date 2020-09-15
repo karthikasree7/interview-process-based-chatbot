@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interview</title>
+	<link rel="stylesheet" href="/static/css/interview1.css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+
+<style>
+
+.disable{
+pointer-events:none;
+
+}
+
+  input {
+      border-top-style: hidden;
+      border-right-style: hidden;
+      border-left-style: hidden;
+      border-bottom-style: groove;
+      background-color: #083050;
+	      color: white;
+      }
+      .no-outline:focus {
+      outline: none;
+      }
+	</style>
+	
+	<script>
+	function ValidationEvent(){
+		swal("Good job!", "Thanks you for your intrested!", "success");
+	  return true;
+	}
+</script>
+<body>
+<h1>BASED ON YOUR PROFILE</h1> <br> 
+
+{% if role=="admin" %}
+<a href="/admin.html"><h1>BACK</h1></a><br> 
+ {% else %}
+        <a href="/user.html"><h1>BACK</h1></a><br> 
+    {% endif %}
+
+{% if data is defined %}
+{% for trend in data %}
+<form action="/intrested" method="POST" id="myform" onsubmit="return ValidationEvent()"> <br>
+
+<table align="center" cellpadding="10"> <br> 
+<tr>
+	<td> <a  class="btn">Interview Details</a></td>
+</tr>
+<tr>
+	<td>Company Name:
+	 <input type="text" class="no-outline disable" name="company"  value="{{trend[1]}}" > </td>
+</tr>
+
+<tr>
+	<td>Technical Skills :
+	<input type="text" class="no-outline disable" name="tech"  value="{{trend[2]}}" /> </td>
+</tr>
+<tr>
+	<td>Experience :
+		<input type="text" class="no-outline disable" name="experience" value="{{trend[3]}}"/>
+	</td>
+</tr>
+
+
+
+<tr>
+<td>Location :
+<input type="text" class="no-outline disable" name="location"  value="{{trend[4]}} "/>
+
+</td>
+
+</tr>
+<tr>
+
+{% if role=="admin" %}
+<td></td>
+ {% else %}
+<td align="left" colspan="2">
+	<input type="submit" value="Intrested"></td>
+ {% endif %}
+</tr>
+</table>
+</form>
+
+
+</table>
+</form>
+
+{% endfor %}
+
+{% endif %}
+</body>
+
+</html>

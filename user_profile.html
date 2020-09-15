@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Profile Update</title>
+	<link rel="stylesheet" href="/static/css/user_profile1.css">
+</head>
+<script>
+
+
+
+$(document).ready(function(){
+
+var x=document.getElementsByTagName("input"); // plural
+
+  for(var i = 0; i < x.length; i++) {
+    var str=x[i].value; 
+    x[i].value=str.replace("None"," ");
+  }
+  
+    $(".myText").hide();
+
+$(".btn").click(function() {
+  
+   var lable = $(".btn").text().trim();
+
+   if(lable == "Close") {
+     $(".btn").text("Edit");
+     $(".myText").hide();
+   }
+   else {
+     $(".btn").text("Close");
+     $(".myText").show();
+   }
+    
+  });
+
+});
+</script>
+
+<style>
+.custom {
+  background-color: #4CAF50; / Green /
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.custom1 {
+border-radius: 12px;
+}
+</style>
+
+<body>
+	<center>
+	<form action="/updateProfile" method="post">
+<h1>PROFILE	 UPDATE</h1> <br> <br>
+
+&nbsp;&emsp;&emsp;<a id ="#edit" href="/user.html" type="button" class="btn btn-success btn-lg custom" 	style =  "margin-left: 5px;">Back</a>&nbsp;&emsp;&emsp;
+&nbsp;&emsp;&emsp;<input id ="#edit" type="button" class="btn btn-success btn-lg custom" 	style =  "margin-left: 550px;" value = "Edit">&nbsp;&emsp;&emsp;<br><br>
+<table align="center" cellpadding="10">
+<tr>
+<td>First Name :</td>
+<td> <input type="text" id="name" name="user_id" placeholder="Enter your First Name" required="required" value="{{data[0][0]}}"></td>
+</tr>
+<tr>
+<td>First Name :</td>
+<td> <input type="text" id="name" name="fName" placeholder="Enter your First Name" required="required" value="{{data[0][2]}}"></td>
+</tr>
+<tr>
+<td>Last Name :</td>
+<td><input type="text" id="name" name="lName" placeholder="Enter your Last Name" required="required" value="{{data[0][3]}}"></td>
+</tr>
+<tr>
+<td>Email :</td>
+<td><input type="email" id="name" name="email" placeholder="Enter your Email"required="required" value="{{data[0][4]}}"></td>
+</tr>
+<tr>
+<td>Eduction:</td>
+<td><input type="text" id="name" name="education" placeholder="Enter your Education"required="required" value="{{data[0][6]}}"></td>
+</tr>
+<tr>
+<td>Technical Skills:</td>
+<td><input type="text" id="name" name="techSkills" placeholder="Enter your Technical Skills"required="required" value="{{data[0][7]}}"></td>
+</tr>
+<tr>
+<td>Date of Birth:</td>
+<td><input type="date" id="name" name="dob" placeholder="Enter your DOB" required="required"  value="{{data[0][8]}}"></td>
+</tr>
+<tr>
+<td>Mobile Number:</td>
+<td><input type="number" id="name" name="mobNumber" placeholder="Enter your Mobile Number" required="required" value="{{data[0][9]}}"></td>
+</tr>
+<tr>
+<td>Gender :</td>
+<td>  
+
+<select class="form-group" value="{{data[0][10]}}" name="gender">
+	<option value="male">Male</option>
+	<option value="female">FeMale</option>
+	<option value="Others">Others</option>
+
+</select>
+</td>
+</tr>
+<tr>
+<td>City:</td>
+<td><input type="text" id="name" name="userCity" value="{{data[0][11]}}" placeholder="Enter your City"required="required"></td>
+</tr>
+<tr>
+<td>State:</td>
+<td><input type="text" id="name" name="userState" value="{{data[0][12]}}" placeholder="Enter your State" required="required"></td>
+</tr>
+<tr>
+<td>Country:</td>
+<td><input type="text" id="name" name="userCountry" value="{{data[0][13]}}" placeholder="Enter your Country"required="required"></td>
+</tr>
+<tr>
+<td>pincode :</td>
+<td><input type="number" id="name" name="pinCode" value="{{data[0][14]}}" placeholder="Enter your pincode" required="required"></td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<div class="myText">
+<input type="submit" value="Save">&nbsp;&emsp;&emsp; 
+
+</div>
+
+</td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+
+</html>
